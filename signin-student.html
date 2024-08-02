@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>SCOE Dashboard</title>
+</head>
+<body class="bg-[#202636] ">
+  <nav>
+    <div class="text-center py-4 bg-[#205e72] text-[24px] text-white">LOGO</div>
+  </nav>
+<section>
+  <!-- Container -->
+  <div class="grid gap-0  md:grid-cols-2">
+    <!-- Component -->
+    <div class="flex items-center justify-center ">
+      <div class="mx-auto max-w-lg ">
+        <img src="/Secure login-rafiki.png"  alt="">
+      </div>
+    </div>
+    <!-- Component -->
+    <div class="flex items-center justify-center px-5 py-16 md:px-10 md:py-20 h-screen bg-white">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 text-3xl font-bold md:mb-12 md:text-5xl lg:mb-16 "> Student Login </h2>
+        <!-- Form -->
+        <div class="mx-auto mb-4 max-w-sm pb-4">
+          <form name="wf-form-password" method="get">
+            <div class="relative">
+              <img alt="" src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a9455fae6cf89_EnvelopeSimple.svg" class="absolute left-5 top-3 inline-block" />
+              <input type="email" class="mb-4 block h-9 w-full rounded-md border border-solid border-black px-3 py-6 pl-14 text-sm text-black placeholder:text-black" placeholder="Email Address" required="" />
+            </div>
+            <div class="relative mb-4">
+              <img alt="" src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a946794e6cf8a_Lock-2.svg" class="absolute left-5 top-3 inline-block" />
+              <input type="password" class="mb-4 block h-9 w-full rounded-md border border-solid border-black px-3 py-6 pl-14 text-sm text-black placeholder:text-black" placeholder="Password (min 8 characters)" required="" />
+            </div>
+            <p class="text-sm text-gray-500 sm:text-sm text-left"> <a href="#" class="text-blue-500">
+              <span> </span>Forgot Password?
+            </a>
+          </p>
+         <input type="submit" value="Login " class="inline-block w-full cursor-pointer items-center bg-[#205e72] px-6 py-3 text-center font-semibold text-white mt-12" />
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
