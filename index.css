@@ -28,19 +28,16 @@ body{
     color: white;
     outline: none;
     border: none;
-    padding: 24px 36px;
-    margin: 32px;
+    padding: 20px 20px;
+    margin: 24px;
     border-radius: 16px;
     font-size: 28px;
-    /* height: 72px; */
     align-items: center;
+    transition: all .4s;
 }
-.option-button:hover{
-    background: #3b7d93;
-    box-shadow: rgba(123, 123, 134, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(128, 128, 135, 0.1) 0px 16px 48px;
-}
+
 .faculty-or-student-container{
-    margin-left: 24px;
+    /* margin-left: 24px; */
     margin-top: 12vh;
 }
 a {
@@ -57,19 +54,6 @@ a {
     margin-top: 5vh;
     margin-bottom: 20px; /* Adds space between the two rows */
 }
-
-@media only screen and (max-width: 768px) {
-    .button-group {
-      flex-direction: row;
-    }
-    .option-button {
-      flex: 1 1 calc(50% - 16px); 
-      margin: 8px; 
-      padding: 18px 28px; 
-      font-size: 16px; 
-    }
-  }
-  /* For faculty button */ 
 .btn {
     background: #205e72;
     color: white;
@@ -79,11 +63,30 @@ a {
     margin: 32px;
     border-radius: 16px;
     font-size: 28px;
-    height: 96px;
     align-items: center;
     transition: all .4s;
    }
    
+@media only screen and (max-width: 768px) {
+    .button-group {
+      flex-direction: row;
+    }
+    .option-button {
+      flex: 1 1 calc(50% - 16px); 
+      padding: 20px 0px;
+      margin: 4px;
+      font-size: 16px; 
+    }
+    .btn{
+        padding: 14px 24px; 
+        /* height: 72px; */
+        margin: 8px;
+        
+
+    }
+  }
+  /* For faculty button */ 
+
    .btn:hover {
     background: #3b7d93;
     border-radius: 5px;
@@ -94,6 +97,30 @@ a {
    }
    
    .btn:active {
+       transition: all 0.2s;
+       transform: translateY(-5px);
+       box-shadow: 0 2px 0 -2px #f85959,
+       0 8px 0 -4px #39a2db,
+       0 12px 10px -3px #39a2db;
+    }
+    .option-button:hover {
+     background: #3b7d93;
+     border-radius: 5px;
+     transform: translateY(-10px);
+     box-shadow: 0 7px 0 -2px #f85959,
+      0 15px 0 -4px #39a2db,
+      0 16px 10px -3px #39a2db;
+    }
+   .option-button:hover {
+    background: #3b7d93;
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #f85959,
+     0 15px 0 -4px #39a2db,
+     0 16px 10px -3px #39a2db;
+   }
+   
+   .option-button:active {
     transition: all 0.2s;
     transform: translateY(-5px);
     box-shadow: 0 2px 0 -2px #f85959,
