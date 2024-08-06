@@ -25,12 +25,36 @@
         <div class="signin-card">   
             <h6 class="font-48">Faculty Login</h6>
             <p>Please login to continue </p>
-            <div class="input-container">
-                <input type="email" name="email" id="" placeholder="Email"> <br>
-            <input type="password" name="email" id="" placeholder="Password">
-        </div>
-        <button class="submit-button" type="submit"><a href="/dashboard.html">Submit</a></button>
+            <form id="signin-form" onsubmit="return validateForm()">
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Email" required> <br>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
         </div>
     </div>
+    <script>
+      function validateForm() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+        }
+
+        if (!passwordPattern.test(password)) {
+          alert('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.');
+          return false;
+        }
+
+        // Redirect to dashboard.html on successful validation
+        window.location.href = '/dashboard.html';
+        return false; // Prevent form from submitting the default way
+      }
+    </script>
   </body>
 </html>
